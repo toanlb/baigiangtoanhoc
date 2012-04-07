@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../css/text.css"/>
+<link rel="stylesheet" type="text/css" href="../css/960.css"/>
+<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+<!--[if IE 6]>
+	<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+	<script type="text/javascript">  
+		DD_belatedPNG.fix('.*');  
+	</script>
+<![endif]-->
+<script type="text/javascript">
+var number =0;
+var time_slide = 0;
+	$(document).ready(function(){
+					$('.slideshow a').hide();
+					$('.slideshow a:first').show();
+					number = $('.slideshow a').size();
+					rotate = function(){
+						$('.slideshow a').fadeIn('slow');
+						}
+					rotate_switch = function(){
+						setInterval(function(){
+											 rotate();
+											 },3000);
+						}
+						
+					rotate_switch();				
+							   })
+</script>
+<title>TTC</title>
+</head>
+<body>
+
+
+ <div class="content_mid">
+     
+      <?php
+	  if(!isset($_GET["vt"])) $vt=0;
+	  else $vt=intval($_GET["vt"]);
+	  
+	  $sql="select id_tin,DATE_FORMAT(capnhat,'Cập nhật lúc %H:%i ngày %d/%m/%Y') as hs,DATE_FORMAT(capnhat,'(%d/%m/%Y)') as dt, anhtrichdan,tieude$noi,trichdan$noi from gws_tinbai where trim(tieude$noi)<>'' and id_parent=".get_id($_GET["code"])." and kiemduyet=1";
+	  $rs_count=@mysql_query($sql);
+	  $count=mysql_num_rows($rs_count);
+	  $sodong=10;
+	  $sotrang=intval($count/($sodong+1));
+	  if($sotrang<$count/($sodong+1)) $sotrang=$sotrang+1;
+	  $limit=($vt+1)*$sodong;
+	  $sql.=" order by capnhat desc limit $limit";
+	  
+	  //echo $sql;
+	  $result=@mysql_query($sql);
+	  if(@mysql_num_rows($result)==0)
+	  {
+		echo "Hiện không có tin nào!";
+	  }
+	  if(@mysql_num_rows($result)==1)
+	  {
+		$row=@mysql_fetch_array($result);
+		echo "<script language=\"javascript\">
+		window.location='"."?".$_SERVER['QUERY_STRING']."&id=".$row["id_tin"]."';
+		</script>";
+	  }
+	  $i=1;  
+	  if(@mysql_num_rows($result)!=0) 
+	  {
+		$bg=$limit-$sodong;
+		for($i=0;$i<$bg;$i++) $row=mysql_fetch_array($result);    
+		while($row=@mysql_fetch_array($result)){
+		$i++;
+		$href="?".$_SERVER['QUERY_STRING']."&id=".$row["id_tin"];
+	?>
+	<?
+$iChar = "500"; // Max number of character(s) for cutting
+$iOutput = "250"; // Max number of character(s) for the output
+if(strlen($row["trichdan$noi"]) > $iChar)
+{
+    $cOutput = mb_substr($row["trichdan$noi"], 0, $iOutput, "UTF-8");
+    while(substr($cOutput, -1) != " ")
+    {
+        $cOutput = substr($cOutput, 0, strlen($cOutput)-1);
+    }
+    $cOutput = $cOutput." ...";
+}
+
+?>
+            <div class="row"> 
+		
+			<img src="<? echo $row["anhtrichdan"]?>" width="134" height="96" align="left"   style="margin-right:5px;"/>
+			     <p class="title_news"><a href="<?php echo $href;?>"><?php echo $row["tieude$noi"];?></a></p>
+			    <? echo $cOutput;?>
+			 </div>
+      
+           <?php }}?>
+	<!--Paging-->
+	<?php if(@mysql_num_rows($result)>0) {?>
+	<?php $href=str_replace("&vt=$vt","",$_SERVER['QUERY_STRING']);?>&nbsp;
+	<?php if($noi!="_eng") echo "Trang:";else echo "Page:";?> <?php for($i=0;$i<$sotrang;$i++){$so=$i+1;?>
+			<?php if($vt==$i) echo "<strong>$so</strong>";else{?>
+			<a href="?<?php echo $href."&vt=$i";?>" style="color:#BC0000"><?php echo $so;?></a>
+			<?php }?>
+		<?php }?>
+	<?php } ?>
+      
+ </div>
+</body>
+</html>

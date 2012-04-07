@@ -1,0 +1,224 @@
+﻿<?php include("w3s.php");?>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/text.css"/>
+<link rel="stylesheet" type="text/css" href="css/960.css"/>
+<script type="text/javascript" src="js/jquery-1.4.4.js"></script>
+<script type="text/javascript" src="js/cufon.js"></script>
+<script type="text/javascript" src="js/VNIAvo_500.font.js"></script>
+<script type="text/javascript" src="js/jquery.blend.js"></script>
+<script type="text/javascript" src="js/jcarousel-lite.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.1.4.7.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.1.js"></script>
+<script type="text/javascript" src="js/ddlevelsmenu.js"></script>
+<script type="text/javascript" src="js/captify.tiny.js"></script>
+<script type="text/javascript" src="js/slides.min.jquery.js"></script>
+<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+							   $('.partner').jCarouselLite({
+														   btnNext:'.next_partner',
+														   btnPrev:'.prev_partner',
+														   auto:1000,
+														   speed:1000
+														   });
+							    $('.news_slide').jCarouselLite({
+														   vertical: true,
+														   auto:1500,
+														   speed:1500,
+														   visible:4
+														   });
+								 $('#slider').slides({
+													       play: 5000,
+													       pause: 2500,
+													       hoverPause: true
+													 });
+								
+								 
+								 
+							   })
+	
+	Cufon.replace('.col h3 a',{hover:true});
+	Cufon.replace('.col_2 h3 a',{hover:true});
+	Cufon.replace('.row_slide h3');
+	Cufon.replace('.col_r h3 a',{hover:{textShadow:'#ccc 1px 1px',color:'#00'},textShadow:'#000 1px 1px'});
+	Cufon.replace('a.btn_signup',{hover:{textShadow:'#fff 0px 0px'},textShadow:'#000 1px 1px'});
+	Cufon.replace('.menu_in ul li a',{hover:{textShadow:'#fff 0px 0px'},textShadow:'#000 1px 1px'});
+</script>
+<title>Viện đào tạo và phát triển kinh tế</title>
+</head>
+<body>
+<?php
+	if(isset($_GET["lang"])) {
+		$href_lang_vn = "./?".str_replace("&lang=en","",$_SERVER['QUERY_STRING']);
+		$href_lang_en = "#";
+	} else if(!isset($_GET["lang"])) {
+		$href_lang_vn = "#";
+		$href_lang_en = "./?".$_SERVER['QUERY_STRING']."&lang=en";
+	}
+	
+?>
+<?php include("m_content/header.php");?>
+
+<div class="top_content"></div>
+<div class="clear"></div>
+<div id="content">
+  <div class="grid_12_fix">
+    <div class="left">
+      <div class="row">
+	  
+	  
+         <?php 
+		switch ($page)
+		  {
+			case "home":require("home.php");break;
+			case "hoat-dong-nv":require("m_hoatdongnv/main.php");break;
+			
+			case "tin-tuc":require("m_news/main.php");break;
+			
+			case "lien-ket":require("m_lienket/main.php");break;
+			case "ds-lien-ket":require("m_lienket/n_others.php");break;
+			case "tin-khuyen-mai":require("m_news/focus.php");break;
+			case "hoc-vien-ited":require("m_hocvien/main.php");break;
+			case "tin-hoc-vien-ited":require("m_hocvien/n_others.php");break;
+			case "thu-vien":require("m_thuvien/main.php");break;
+			case "hoc-bong-du-hoc":require("m_hocbong/main.php");break;
+			case "tin-hoc-bong-du-hoc":require("m_hocbong/n_others.php");break;
+			case "lien-he":require("m_contact/contact.php");break;
+			case "gioi-thieu":require("m_gioithieu/main.php");break;
+			case "tin-gioi-thieu":require("m_gioithieu/n_others.php");break;
+			case "tuyen-dung":require("m_tuyendung/main.php");break;
+			case "search":require("m_search/result.php");break;
+			case "tracuudiemthi":require("m_tracuudiemthi/result.php");break;
+			case "chi-tiet":require("m_tracuudiemthi/tk.php");break;
+			default:require("m_content/main.php");break;
+		  }
+		?>		
+	  
+	  </div>
+      <div class="row">
+	  
+	   <div class="col_2">
+            <h3><?php 
+		  $hoatdong="./?page=hoat-dong-nv&lang=en";
+          $hoatdong="./?page=hoat-dong-nv";
+if ($lang=="en") echo "<a href='".$hoatdong."'>Activities of employees &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>";else echo "<a href='".$hoatdong1."'>Caùc hoaït ñoäng cuûa nhaân vieân "; echo " </a>"; ?></h3>
+
+          <div class="col"><img src="images/img_hoat_dong.jpg"  alt="img" width="180"  border="0" align="left" /> </div>
+          <div class="col omega">
+            <?php include('m_hoatdongnv/focus.php'); ?>
+          </div>
+        </div>
+        <div class="col omega">
+          <h3><?php 
+		  $thuvien="./?page=thu-vien&lang=en";
+          $thuvien1="./?page=thu-vien";
+if ($lang=="en") echo "<a href='".$thuvien."'>Corner students & library materials " ;else echo "<a href='".$thuvien1."'>Goùc hoïc vieân & thö vieän taøi lieäu "; echo " </a>"; ?></h3>
+		  
+         <?php include('m_thuvien/focus.php'); ?>
+        </div>
+	  
+	  
+	  </div>
+	  
+     
+      <div class="row_slide">
+        <h3>
+		<?php 
+		  
+if ($lang=="en") echo "Important partner";else echo "Ñoái taùc quan troïng "; ?></h3>
+		  
+        <a class="next_partner"></a> <a class="prev_partner"></a>
+        <div class="partner">
+		
+		 <? include("m_adv/doitac.php")?>
+         
+        </div>
+      </div>
+	  
+	  
+	  
+	  
+    </div>
+	
+  
+    <div class="right">
+	
+      <div class="col_r">
+         <h3><?php 
+		  $tin="./?page=tin-tuc&lang=en";
+          $tin="./?page=tin-tuc";
+if ($lang=="en") echo "<a href='".$hoatdong."'>News";else echo "<a href='".$hoatdong1."'>Tin töùc môùi caäp nhaät"; echo " </a>"; ?></h3>
+        <div class="news_slide">
+         <? include("m_news/focus.php")?>
+        </div>
+      </div>
+	  
+      <div class="col_r">
+          <h3><?php 
+		  $dk="./?page=dang-ky&lang=en";
+          $dk1="./?page=dang-ky";
+if ($lang=="en") echo "<a href='".$dk."'>Apply online";else echo "<a href='".$dk1."'>Ñaêng kyù tröïc tuyeán "; echo " </a>"; ?></h3>
+        <div class="sign_up">
+          <? include("m_content/yahoo.php")?>
+		  <a href="?page=lien-he" class="btn_signup">Ñaên kyù</a>
+        </div>
+      </div>
+	  
+      <div class="col_r">
+         <h3><?php 
+		  $dk="./?page=tracuudiem&lang=en";
+          $dk1="./?page=tracuudiem";
+if ($lang=="en") echo "<a href='".$dk."'>Look up passing mark";else echo "<a href='".$dk1."'>Tra cöùu ñieåm thi "; echo " </a>"; ?></h3>
+        <div class="find_match">
+         <? include("m_tracuudiemthi/main.php")?>
+        </div>
+      </div>
+	  
+	  
+	     <div class="col_r">
+         <h3><?php 
+		
+if ($lang=="en") echo "<a href=''>Scheduling";else echo "<a href=''>Lòch khai giaûng"; echo " </a>"; ?></h3>
+        <div class="find_match">
+         <? include("m_thuvien/n_others.php")?>
+        </div>
+      </div>
+	  
+	  
+	  
+      <div class="col_r">
+	  <div class="sign_up">
+        <script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script>
+<a href="http://www.histats.com" target="_blank" title="hidden hit counter" ><script  type="text/javascript" >
+try {Histats.start(1,1419506,4,15,200,40,"00011111");
+Histats.track_hits();} catch(err){};
+</script></a>
+<noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?1419506&101" alt="hidden hit counter" border="0"></a></noscript>
+</div>
+      </div>
+	  
+    </div>
+  </div>
+  
+  <div class="grid_12_fix">
+    <div class="slogan_bottom">define the future</div>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="bottom_content"></div>
+<div class="clear"></div>
+
+<?php include("m_content/footer.php");?>
+ <script type="text/javascript">
+<!--
+swfobject.registerObject("FlashID");
+swfobject.registerObject("FlashID");
+//-->
+</script>
+</body>
+</html>

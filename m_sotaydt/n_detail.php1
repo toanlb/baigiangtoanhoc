@@ -1,0 +1,26 @@
+
+
+	<?php
+	  $sql="select capnhat,DATE_FORMAT(capnhat,'Cập nhật lúc %H:%i ngày %d-%m-%Y') as hs, tieude$noi,anhtrichdan, noidung$noi,trichdan$noi from gws_tinbai where trim(tieude$noi)<>'' and id_tin=$id";
+	  $result=@mysql_query($sql);
+	  if(@mysql_num_rows($result)!=0){
+		$row=@mysql_fetch_array($result);
+		$datetime=$row["capnhat"];
+	?>
+	
+	<strong><?php echo $row["tieude$noi"];?></strong>
+		
+	
+	<br />
+		<b style="color:#666"><?php echo $row["trichdan$noi"];?></b>
+		<?php echo $row["noidung$noi"];?><br />
+		<span class="capnhat" style="color:#333333;"><?php echo $row["hs"];?></span><br />
+		<a href="javascript:history.go(-1);" style="font-weight:bold; text-decoration:underline; color:black">Quay lại</a>
+	<?php }else{?>
+	<script language="javascript">
+	window.location="?page=home<?php echo $duoi;?>";
+	</script>
+	
+
+	<?php }?>
+	

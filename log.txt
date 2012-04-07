@@ -1,0 +1,30 @@
+20110301 03:51:13UPLOAD - 127.0.0.1FTPUsername.doc application/msword
+20110301 03:55:18UPLOAD - 127.0.0.1IMG_4165.jpg image/jpeg
+20110301 03:55:33UPLOAD - 127.0.0.1Duong Ngoc Thai - Mai Mot Em Ve.mp3 
+20110301 03:56:34UPLOAD - 127.0.0.1Duong Ngoc Thai - Van Mong Nguoi Ve.mp3 
+20110301 03:58:08UPLOAD - 127.0.0.1Album Gió lên - Cẩm Ly - Gio len - Cam Ly - Nghe Albums.mp3 
+20110301 03:59:01UPLOAD - 127.0.0.1Aleo.Flash.Intro.Banner.Maker.3.0.Portable.1mak1mak.rar 
+20110301 03:59:13UPLOAD - 127.0.0.1dropdown.rar application/octet-stream
+20110301 03:59:27UPLOAD - 127.0.0.1demo.htm text/html
+20110301 03:59:34UPLOAD - 127.0.0.1bball.txt text/plain
+20110301 03:59:48UPLOAD - 127.0.0.1du an qlinkgroup.doc application/msword
+20110301 04:01:06UPLOAD - 127.0.0.1DSC_3332.JPG 
+20110301 04:01:17UPLOAD - 127.0.0.1DSC_3314.JPG 
+20110301 04:01:29UPLOAD - 127.0.0.1Lightbox.rar application/octet-stream
+20110301 04:01:45UPLOAD - 127.0.0.1banner_slide.jpg image/jpeg
+20110301 04:02:01UPLOAD - 127.0.0.1DSC_3316.JPG 
+20110301 04:02:18UPLOAD - 127.0.0.1Anh Kha.rar application/octet-stream
+20110301 04:02:31UPLOAD - 127.0.0.1dongxuan_sua.txt text/plain
+20110301 04:04:06UPLOAD - 127.0.0.1phuong1.psd application/octet-stream
+20110301 04:06:24UPLOAD - 127.0.0.1Duong Ngoc Thai - Hon Trach Con Do.mp3 
+20110301 04:06:38UPLOAD - 127.0.0.1s Symphony No. 9 (Scherzo).wma audio/x-ms-wma
+20110301 04:08:30UPLOAD - 127.0.0.1SDC13357.JPG 
+20110301 04:08:40UPLOAD - 127.0.0.1P1180939.JPG image/jpeg
+20110302 04:22:07DELETE - 127.0.0.1files/banner_slide.jpg
+20110302 04:22:13DELETE - 127.0.0.1files/du an qlinkgroup.doc
+20110302 04:22:17DELETE - 127.0.0.1files/FTPUsername.doc
+20110302 04:22:21DELETE - 127.0.0.1files/IMG_4165.jpg
+20110302 04:22:26DELETE - 127.0.0.1files/ip.txt
+20110302 04:22:31DELETE - 127.0.0.1files/P1180939.JPG
+20110302 04:22:34DELETE - 127.0.0.1files/s Symphony No. 9 (Scherzo).wma
+20110319 04:22:16UPLOAD - 127.0.0.1backgroundx1.jpg image/jpeg
