@@ -1,0 +1,28 @@
+body, td, input, select, textarea {font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; }
+
+form{padding:0; margin:0}
+.bullet { font-family: arial;}
+
+a:link {
+	text-decoration:none; color: #A81605;
+	margin-right: 10px;
+}
+a:active {text-decoration:none; color: #A81605;}
+a:visited {text-decoration:none; color: #A81605;}
+a:hover {text-decoration:none; color: #A81605;}
+
+tr.gridTitle, td.gridTitle{ border-top: 1px #FFFFFF solid;  border-bottom: 1px #C1C1C1 solid; border-left: 1px #C1C1C1 solid; border-right: 1px #FFFFFF solid; background:#E6E6E6; height:24px; font-weight:bold }
+tr.gridRow, td.gridRow{ border-bottom: 1px #E7E7E7 solid;  background:#F6F6F6;} 
+
+hr { padding:0; height: 0px; border: solid #555D66 0px; border-top-width: 1px;}
+
+.doiVitri{
+	color:#B00300;
+	font-weight:bold;
+}
+
+.gridRow a{
+	margin-right: 10px;
+	display: block;
+	margin-bottom: 15px;
+}

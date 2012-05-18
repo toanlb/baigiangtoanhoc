@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/nivo-slider.css"/>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/VNI-Vari_700.font.js"></script>
+<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+							  $('.slide').nivoSlider({
+													 controlNav: false,
+													   directionNav:false
+													 }); 
+							  $('ul#menu li').hover(function(){
+															  $(this).find('.sub').show();
+															  $(this).find('.have_sub').addClass('active');
+															  },function(){
+																$(this).find('.have_sub').removeClass('active');  
+															   $(this).find('.sub').hide();	  
+																  }); 
+							   });
+	Cufon.replace('ul#menu li a',{hover:true});
+	Cufon.replace('.search',{hover:true});
+	Cufon.replace('.head_line h3 a',{hover:true});
+	Cufon.replace('.col_1 h3 a',{hover:true});
+	Cufon.replace('.title_subj ul li a',{hover:true});
+	Cufon.replace('ul#quick_link',{hover:true});
+</script>
+<title>Tài liệu toán học</title>
+</head>
+<body>
+<div class="wrapper_slide">
+  <div class="container">
+    <div class="grid-10">
+      <ul id="menu">
+        <li><a href="#" class="home">trang chu</a></li>
+        <li><a href="#">giôùi thieäu</a></li>
+        <li><a href="#">baøi giaûng toaùn hoïc</a> </li>
+        <li><a href="#" class="have_sub">ngaân haøng ñeà thi</a>
+          <ul class="sub">
+            <li><a href="#">Ñeà thi ñaïi hoïc</a></li>
+            <li><a href="#">Ñeà thi ñaïi hoïc</a></li>
+            <li><a href="#">Ñeà thi keát thuùc hoïc phaàn</a></li>
+            <li><a href="#">Ñeà thi keát thuùc hoïc phaàn</a></li>
+          </ul>
+        </li>
+        <li><a href="#">kinh nghieäm hoïc toaùn</a></li>
+        <li><a href="#">lieân heä göûi baøi</a></li>
+        <li class="search"> <span>search</span> </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-10">
+      <h1 id="logo"><a href="#">tai lieu toan hoc</a></h1>
+      <div class="options"><a href="#" class="sign_up">đăng ký</a><a href="#" class="login">đăng nhâp</a></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-10">
+      <div class="head_line">
+        <h3><a href="#">Fusce euismod consequat ante. Lorem ipsum dolor sit amet,</a> </h3>
+        <p>Fusce euismod consequat ante. Lorem ipsum dolor sit amet, conse nctetuer adipiscing elit. Pellen tesque sed dolor. Aliquam congue fermentum nisl. Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Nulla </p>
+        <a href="#" class="read_more_line">Xem thêm</a> </div>
+      <div class="hold_slide">
+        <div class="slide"><a href="#"><img src="images/slide-1.jpg" width="570" height="290" alt="img" /></a><a href="#"><img src="images/slide-2.jpg" width="570" height="290" alt="img" /></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="grid-10">
+    <div class="hold_col">
+      <div class="col_1">
+        <h3 class="course"><a href="#">khoa hoc moi</a></h3>
+        <ul class="list_course">
+          <li> <a href="#" class="img_course"><img src="images/img-1.jpg" width="74" height="47" alt="img" /></a> <a href="#" class="title_course">Pusce euismod consequat ante. Lorem ipsum dolor sit </a> <span>August 04, 2011 </span> </li>
+          <li> <a href="#" class="img_course"><img src="images/img-1.jpg" width="74" height="47" alt="img" /></a> <a href="#" class="title_course">Pusce euismod consequat ante. Lorem ipsum dolor sit </a> <span>August 04, 2011 </span> </li>
+          <li> <a href="#" class="img_course"><img src="images/img-1.jpg" width="74" height="47" alt="img" /></a> <a href="#" class="title_course">Pusce euismod consequat ante. Lorem ipsum dolor sit </a> <span>August 04, 2011 </span> </li>
+          <li> <a href="#" class="img_course"><img src="images/img-1.jpg" width="74" height="47" alt="img" /></a> <a href="#" class="title_course">Pusce euismod consequat ante. Lorem ipsum dolor sit </a> <span>August 04, 2011 </span> </li>
+          <li> <a href="#" class="img_course"><img src="images/img-1.jpg" width="74" height="47" alt="img" /></a> <a href="#" class="title_course">Pusce euismod consequat ante. Lorem ipsum dolor sit </a> <span>August 04, 2011 </span> </li>
+        </ul>
+      </div>
+      <div class="col_1">
+        <h3 class="lecture"><a href="#">bai giang noi bat</a></h3>
+        <ul class="list_lecture">
+          <li> <span>27- 03</span> <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing eli</a> </li>
+          <li> <span>27- 03</span> <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing eli</a> </li>
+          <li> <span>27- 03</span> <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing eli</a> </li>
+          <li> <span>27- 03</span> <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing eli</a> </li>
+          <li> <span>27- 03</span> <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing eli</a> </li>
+          <li> <span>27- 03</span> <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing eli</a> </li>
+          <li> <span>27- 03</span> <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing eli</a> </li>
+          <li> <span>27- 03</span> <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing eli</a> </li>
+        </ul>
+      </div>
+      <div class="col_1">
+        <h3 class="bank"><a href="#">ngan hang de thi</a></h3>
+        <ul class="list_course">
+          <li> <a href="#" class="img_course"><img src="images/img-1.jpg" width="74" height="47" alt="img" /></a> <a href="#" class="title_course">Pusce euismod consequat ante. Lorem ipsum dolor sit </a> <span></span> </li>
+          <li> <a href="#" class="img_course"><img src="images/img-1.jpg" width="74" height="47" alt="img" /></a> <a href="#" class="title_course">Pusce euismod consequat ante. Lorem ipsum dolor sit </a> <span></span> </li>
+          <li> <a href="#" class="img_course"><img src="images/img-1.jpg" width="74" height="47" alt="img" /></a> <a href="#" class="title_course">Pusce euismod consequat ante. Lorem ipsum dolor sit </a> <span></span> </li>
+          <li> <a href="#" class="img_course"><img src="images/img-1.jpg" width="74" height="47" alt="img" /></a> <a href="#" class="title_course">Pusce euismod consequat ante. Lorem ipsum dolor sit </a> <span></span> </li>
+          <li> <a href="#" class="img_course"><img src="images/img-1.jpg" width="74" height="47" alt="img" /></a> <a href="#" class="title_course">Pusce euismod consequat ante. Lorem ipsum dolor sit </a> <span></span> </li>
+        </ul>
+      </div>
+      <div class="col_1">
+        <h3 class="news"><a href="#">bai giang noi bat</a></h3>
+        <ul class="list_news">
+          <li> <span>27- 03</span> <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing eli</a> </li>
+          <li> <span>27- 03</span> <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing eli</a> </li>
+          <li> <span>27- 03</span> <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing eli</a> </li>
+          <li> <span>27- 03</span> <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing eli</a> </li>
+          <li> <span>27- 03</span> <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing eli</a> </li>
+          <li> <span>27- 03</span> <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing eli</a> </li>
+          <li> <span>27- 03</span> <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing eli</a> </li>
+          <li> <span>27- 03</span> <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing eli</a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="divide"></div>
+<div class="container">
+  <div class="grid-10">
+    <div class="title_subj">
+      <ul>
+        <li><a href="#">bai giang toan thpt</a></li>
+        <li><a href="#">bai giang toan thcs</a></li>
+        <li><a href="#">bai giang toan dh</a></li>
+        <li><a href="#">bai giang toan tieng anh</a></li>
+      </ul>
+    </div>
+    <div class="hold_subj">
+      <div class="subj">
+        <ul>
+          <li><a href="#">bài giảng toán lớp 12</a></li>
+          <li><a href="#">bài giảng toán lớp 11</a></li>
+          <li><a href="#">bài giảng toán lớp 10</a></li>
+        </ul>
+      </div>
+      <div class="subj">
+        <ul>
+          <li><a href="#">bài giảng toán lớp 9</a></li>
+          <li><a href="#">bài giảng toán lớp 8</a></li>
+          <li><a href="#">bài giảng toán lớp 7</a></li>
+          <li><a href="#">bài giảng toán lớp 6</a></li>
+        </ul>
+      </div>
+      <div class="subj">
+        <ul>
+          <li><a href="#">bài giảng toán lớp 9</a></li>
+          <li><a href="#">bài giảng toán lớp 8</a></li>
+          <li><a href="#">bài giảng toán lớp 7</a></li>
+          <li><a href="#">bài giảng toán lớp 6</a></li>
+        </ul>
+      </div>
+      <div class="subj">
+        <ul>
+          <li><a href="#">bài giảng toán lớp 9</a></li>
+          <li><a href="#">bài giảng toán lớp 8</a></li>
+          <li><a href="#">bài giảng toán lớp 7</a></li>
+          <li><a href="#">bài giảng toán lớp 6</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="grid-10">
+    <ul id="quick_link">
+      <li><a href="#">helios.com.vn</a></li>
+      <li><a href="#">luyenthivip.com.vn</a></li>
+      <li><a href="#">baigiangtructuyen.vn</a></li>
+      <li><a href="#">vtes.com.vn</a></li>
+      <li><a href="#">methametics.com</a></li>
+    </ul>
+  </div>
+</div>
+<div class="sub_footer">
+  <div class="container">
+    <div class="grid-10">
+      <div class="copyright">Copyright &copy;2012 tailieutoan.com.vn Allright Reserved</div>
+      <div class="design">Design by: <a href="#">Helios</a></div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="grid-10">
+      <div class="author">Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Null
+        a ven nullenatis. In pede mi, aliqut sit amet, euismod in</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
